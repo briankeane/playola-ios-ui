@@ -1,0 +1,6 @@
+framework module Pods_PlayolaiOSUI {
+  umbrella header "Pods-PlayolaiOSUI-umbrella.h"
+
+  export *
+  module * { export * }
+}
