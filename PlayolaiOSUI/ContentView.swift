@@ -22,7 +22,7 @@ struct ContentView: View {
             Text("Broadcast")
           }.tag(0)
         
-        Text("Play Screen")
+        DemoDragRelocateView()
           .tabItem {
             Image(systemName: "play.fill")
             Text("Play")
