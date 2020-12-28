@@ -8,8 +8,45 @@
 import SwiftUI
 
 struct HomeView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  let screen = UIScreen.main.bounds
+  
+  var body: some View {
+    ZStack {
+      Color.black
+        .edgesIgnoringSafeArea(.all)
+    
+      // main vstack
+      ScrollView(showsIndicators: false) {
+        LazyVStack {
+          HStack {
+            Button(action: {
+              
+            }, label: {
+              Text("Broadcast")
+            })
+            
+            Spacer()
+            
+            Button(action: {
+              
+            }, label: {
+              Text("Listen")
+            })
+            
+            Spacer()
+            
+            Button(action: {
+              
+            }, label: {
+              Text("Settings")
+            })
+          }
+          
+        }
+      }
+    
+    }
+    .foregroundColor(.white)
     }
 }
 

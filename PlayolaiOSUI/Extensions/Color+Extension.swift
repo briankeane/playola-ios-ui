@@ -34,6 +34,8 @@ extension Color {
   }
   
   public static var playolaRed: Color = Color(red: 0xEB/255, green: 0x5D/255, blue: 0x5A/255)
+  public static var playolaGraySearchText = Color(red: 126/255, green: 127/255, blue: 128/255)
+  public static var playolaGraySearchBackground = Color(red: 49/255, green: 50/255, blue: 51/255)
   public static var playolaBlack: Color = Color(hex: "#1A1A1Aff")
   public static var playolaGray: Color = Color(hex: "868686ff")
   

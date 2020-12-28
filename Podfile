@@ -4,6 +4,7 @@
 target 'PlayolaiOSUI' do
   use_frameworks!
   
+  pod 'Kingfisher'
   pod 'Kingfisher/SwiftUI'
 
 end

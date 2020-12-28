@@ -15,7 +15,7 @@ struct PlayolaiOSUIApp: App {
         WindowGroup {
           HStack {
             if currentUser.isSignedIn {
-              HomeView()
+              ContentView()
             } else {
               SignInView()
             }
