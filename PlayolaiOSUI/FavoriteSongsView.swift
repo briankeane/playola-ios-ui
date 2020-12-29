@@ -31,20 +31,8 @@ struct FavoriteSongsView: View {
         .edgesIgnoringSafeArea(.all)
       VStack {
         List {
-          AlbumHeader(favoriteSongs: favoriteSongs)
-          
-          HStack {
-            Spacer()
-            
-            SmallVerticalButton(text: self.editingMode == .inactive ? "Reorder" : "Done", isOnImage: Image(systemName: "plus"), isOffImage: Image(systemName: "plus"), isOn: true) {
-              self.editingMode = self.editingMode == .active ? .inactive : .active
-            }.onTapGesture {
-              self.editingMode = self.editingMode == .active ? .inactive : .active
-            }
-            
-            Spacer()
-          }
-          .listRowBackground(Color.black)
+          HeaderView(imageURLs: favoriteSongs.map({$0.thumbnailURL }), title: "Your Song Collection", description: "These 10 songs will be used to generate playlists for your friends.")
+
           
           ForEach(favoriteSongs, id:\.self) { song in
             SongCollectionSongView(song: song, buttonTitle: "Replace") { song in
@@ -68,7 +56,7 @@ struct FavoriteSongsView: View {
       }
       
       if songToReplace != nil {
-        SearchSongsView { (song) in
+        SongPickerView { (song) in
           print("replacing \(songToReplace!.title) with :\(song.title)")
           self.songToReplace = nil
         } onDismiss: {
@@ -99,28 +87,4 @@ struct FavoriteSongsView_Previews: PreviewProvider {
         .previewDevice("iPhone 12 Pro Max")
       }
     }
-}
-
-struct AlbumHeader: View {
-  let favoriteSongs: [Song]
-  var body: some View {
-    ZStack {
-      ImageGrid(imageURLS: favoriteSongs.map({$0.thumbnailURL }))
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
-      
-      VStack {
-        Spacer()
-        Text("Your Collection")
-          .font(.system(size: 36))
-          .bold()
-          .padding(.bottom, 10)
-        Text("These are the songs that will be used to generate playlists for your friends, in order of most important to least important.")
-          .font(.system(size: 24))
-          .padding(.leading, 20)
-          .padding(.trailing, 20)
-          .padding(.bottom, 30)
-      }
-    }
-    .listRowInsets(EdgeInsets())
-  }
 }

@@ -33,6 +33,11 @@
 		4BA0E4E7259A5BC90098FF5E /* SearchSongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0E4E6259A5BC90098FF5E /* SearchSongsViewModel.swift */; };
 		4BA0E50F259A9D3E0098FF5E /* DragExperiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0E50E259A9D3E0098FF5E /* DragExperiment.swift */; };
 		4BA0E512259A9FB00098FF5E /* FavoriteSongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0E511259A9FB00098FF5E /* FavoriteSongsViewModel.swift */; };
+		4BE4B0D9259BE6FF002BD93C /* SongSearchTabSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE4B0D8259BE6FF002BD93C /* SongSearchTabSwitcher.swift */; };
+		4BE4B0DC259BE927002BD93C /* String+width.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE4B0DB259BE927002BD93C /* String+width.swift */; };
+		4BE4B0E8259BEFCB002BD93C /* SearchFavoriteSongsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE4B0E7259BEFCB002BD93C /* SearchFavoriteSongsView.swift */; };
+		4BE4B0EB259BF0D3002BD93C /* SongPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE4B0EA259BF0D3002BD93C /* SongPickerView.swift */; };
+		4BE4B0EE259BF588002BD93C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE4B0ED259BF588002BD93C /* HeaderView.swift */; };
 		6E6C8E0A23B40906F9F1D126 /* Pods_PlayolaiOSUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 204BB74243F409927A9D0BF6 /* Pods_PlayolaiOSUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +73,11 @@
 		4BA0E4E6259A5BC90098FF5E /* SearchSongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongsViewModel.swift; sourceTree = "<group>"; };
 		4BA0E50E259A9D3E0098FF5E /* DragExperiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragExperiment.swift; sourceTree = "<group>"; };
 		4BA0E511259A9FB00098FF5E /* FavoriteSongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSongsViewModel.swift; sourceTree = "<group>"; };
+		4BE4B0D8259BE6FF002BD93C /* SongSearchTabSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchTabSwitcher.swift; sourceTree = "<group>"; };
+		4BE4B0DB259BE927002BD93C /* String+width.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+width.swift"; sourceTree = "<group>"; };
+		4BE4B0E7259BEFCB002BD93C /* SearchFavoriteSongsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFavoriteSongsView.swift; sourceTree = "<group>"; };
+		4BE4B0EA259BF0D3002BD93C /* SongPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongPickerView.swift; sourceTree = "<group>"; };
+		4BE4B0ED259BF588002BD93C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,9 @@
 				4B42A29E258D35BC00037AA8 /* CurrentUser.swift */,
 				4B20BE7B259A4A3200EC7F46 /* SearchBar.swift */,
 				4BA0E4E3259A5B8C0098FF5E /* SearchSongsView.swift */,
+				4BE4B0EA259BF0D3002BD93C /* SongPickerView.swift */,
+				4BE4B0D8259BE6FF002BD93C /* SongSearchTabSwitcher.swift */,
+				4BE4B0E7259BEFCB002BD93C /* SearchFavoriteSongsView.swift */,
 				4BA0E4E6259A5BC90098FF5E /* SearchSongsViewModel.swift */,
 				4B20BE7E259A582400EC7F46 /* ActivityIndicator.swift */,
 				4B42A2B9258D587D00037AA8 /* SongCollectionView */,
@@ -115,6 +128,7 @@
 				4B42A27A258D020500037AA8 /* ContentView.swift */,
 				4B8DA4AD2599342D00D887DA /* SmallVerticalButton.swift */,
 				4B8DA4A02599084C00D887DA /* FavoriteSongsView.swift */,
+				4BE4B0ED259BF588002BD93C /* HeaderView.swift */,
 				4BA0E511259A9FB00098FF5E /* FavoriteSongsViewModel.swift */,
 				4B8DA4BD259A144D00D887DA /* ImageGrid.swift */,
 				4B42A27C258D020800037AA8 /* Assets.xcassets */,
@@ -162,6 +176,7 @@
 				4B42A290258D04C600037AA8 /* Color+Extension.swift */,
 				4B8DA4A325992E4A00D887DA /* LinearGradient+blackOpacityGradient.swift */,
 				4B20BE84259A59FF00EC7F46 /* View+hideKeyboard.swift */,
+				4BE4B0DB259BE927002BD93C /* String+width.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -311,8 +326,13 @@
 				4BA0E4E7259A5BC90098FF5E /* SearchSongsViewModel.swift in Sources */,
 				4BA0E512259A9FB00098FF5E /* FavoriteSongsViewModel.swift in Sources */,
 				4B42A27B258D020500037AA8 /* ContentView.swift in Sources */,
+				4BE4B0EB259BF0D3002BD93C /* SongPickerView.swift in Sources */,
+				4BE4B0E8259BEFCB002BD93C /* SearchFavoriteSongsView.swift in Sources */,
 				4B42A279258D020500037AA8 /* PlayolaiOSUIApp.swift in Sources */,
 				4B42A2B2258D55BC00037AA8 /* SongCollectionViewModel.swift in Sources */,
+				4BE4B0DC259BE927002BD93C /* String+width.swift in Sources */,
+				4BE4B0EE259BF588002BD93C /* HeaderView.swift in Sources */,
+				4BE4B0D9259BE6FF002BD93C /* SongSearchTabSwitcher.swift in Sources */,
 				4B42A2A2258D382300037AA8 /* User.swift in Sources */,
 				4B42A291258D04C600037AA8 /* Color+Extension.swift in Sources */,
 				4B20BE85259A59FF00EC7F46 /* View+hideKeyboard.swift in Sources */,

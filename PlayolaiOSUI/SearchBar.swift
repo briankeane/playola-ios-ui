@@ -36,7 +36,7 @@ struct SearchBar: View {
                     .onTapGesture(perform: {
                         isEditing = true
                     })
-                  .animation(.default)
+                    .animation(.default)
                 
                 if !text.isEmpty {
                     if isLoading {
@@ -49,6 +49,7 @@ struct SearchBar: View {
                                 }
                         })
                         .padding(.trailing, 32)
+                        .padding(.leading, 13)
                         .frame(width: 35, height: 35)
                         
                     } else {
@@ -59,7 +60,7 @@ struct SearchBar: View {
                                 .foregroundColor(.playolaGraySearchText)
                                 .frame(width: 35, height: 35)
                         })
-                        .padding(.trailing, 18)
+                        .padding(.trailing, 15)
                     }
                 }
                 
@@ -87,7 +88,7 @@ struct SearchBar_Previews: PreviewProvider {
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
-            SearchBar(text: .constant(""), isLoading: .constant(false))
+            SearchBar(text: .constant(""), isLoading: .constant(true))
                 .padding()
         }
     }
