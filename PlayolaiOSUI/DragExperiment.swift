@@ -34,10 +34,11 @@ struct DemoDragRelocateView: View {
       Color.black
         .edgesIgnoringSafeArea(.all)
       
-      ScrollView {
-        LazyVGrid(columns: model.columns, spacing: 10) {
+//      ScrollView {
+        List {
           ForEach(model.data) { song in
             SongCollectionSongView(song: song, buttonTitle: "Here", buttonAction: {
+              song in
               print("button pressed")
             })
               .overlay(dragging?.id == song.id ? Color.gray.opacity(1.0) : Color.clear)
@@ -47,10 +48,11 @@ struct DemoDragRelocateView: View {
               }
               .onDrop(of: [UTType.text], delegate: DragRelocateDelegate(item: song, listData: $model.data, current: $dragging))
             .frame(width: 360, height: 75)
-          }
-        }.animation(.default, value: model.data)
-      }.onDrop(of: [UTType.text], delegate: DropOutsideDelegate(current: $dragging))
-    }
+          }.animation(.default, value: model.data)
+          
+        }.onDrop(of: [UTType.text], delegate: DropOutsideDelegate(current: $dragging))
+      }
+//    }
   }
 }
 

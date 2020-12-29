@@ -31,7 +31,7 @@
 		4B8DA4BE259A144D00D887DA /* ImageGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8DA4BD259A144D00D887DA /* ImageGrid.swift */; };
 		4BA0E4E4259A5B8C0098FF5E /* SearchSongsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0E4E3259A5B8C0098FF5E /* SearchSongsView.swift */; };
 		4BA0E4E7259A5BC90098FF5E /* SearchSongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0E4E6259A5BC90098FF5E /* SearchSongsViewModel.swift */; };
-		4BA0E50F259A9D3E0098FF5E /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0E50E259A9D3E0098FF5E /* GridView.swift */; };
+		4BA0E50F259A9D3E0098FF5E /* DragExperiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0E50E259A9D3E0098FF5E /* DragExperiment.swift */; };
 		4BA0E512259A9FB00098FF5E /* FavoriteSongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA0E511259A9FB00098FF5E /* FavoriteSongsViewModel.swift */; };
 		6E6C8E0A23B40906F9F1D126 /* Pods_PlayolaiOSUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 204BB74243F409927A9D0BF6 /* Pods_PlayolaiOSUI.framework */; };
 /* End PBXBuildFile section */
@@ -66,7 +66,7 @@
 		4B8DA4BD259A144D00D887DA /* ImageGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGrid.swift; sourceTree = "<group>"; };
 		4BA0E4E3259A5B8C0098FF5E /* SearchSongsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongsView.swift; sourceTree = "<group>"; };
 		4BA0E4E6259A5BC90098FF5E /* SearchSongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongsViewModel.swift; sourceTree = "<group>"; };
-		4BA0E50E259A9D3E0098FF5E /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		4BA0E50E259A9D3E0098FF5E /* DragExperiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragExperiment.swift; sourceTree = "<group>"; };
 		4BA0E511259A9FB00098FF5E /* FavoriteSongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSongsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,7 +124,7 @@
 				4B42A2A1258D382300037AA8 /* User.swift */,
 				4B42A2A4258D391800037AA8 /* Mocks.swift */,
 				4B42A2B4258D561F00037AA8 /* Song.swift */,
-				4BA0E50E259A9D3E0098FF5E /* GridView.swift */,
+				4BA0E50E259A9D3E0098FF5E /* DragExperiment.swift */,
 			);
 			path = PlayolaiOSUI;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 				4B42A29A258D0EA600037AA8 /* HomeView.swift in Sources */,
 				4B20BE7F259A582400EC7F46 /* ActivityIndicator.swift in Sources */,
 				4B42A2AF258D55AC00037AA8 /* SongCollectionView.swift in Sources */,
-				4BA0E50F259A9D3E0098FF5E /* GridView.swift in Sources */,
+				4BA0E50F259A9D3E0098FF5E /* DragExperiment.swift in Sources */,
 				4B8DA4AE2599342D00D887DA /* SmallVerticalButton.swift in Sources */,
 				4B8DA4A12599084C00D887DA /* FavoriteSongsView.swift in Sources */,
 				4BA0E4E4259A5B8C0098FF5E /* SearchSongsView.swift in Sources */,

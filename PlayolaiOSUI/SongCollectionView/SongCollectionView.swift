@@ -19,6 +19,7 @@ struct SongCollectionView: View {
       ScrollView {
         ForEach(vm.songs, id: \.self) { song in
           SongCollectionSongView(song: song, buttonTitle: "Replace") {
+            song in
             print("replace requested")
           }
           

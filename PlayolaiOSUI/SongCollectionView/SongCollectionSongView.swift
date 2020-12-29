@@ -11,7 +11,7 @@ import struct Kingfisher.KFImage
 struct SongCollectionSongView: View {
   var song: Song
   var buttonTitle: String
-  var buttonAction: () -> Void
+  var buttonAction: (Song) -> Void
   
     var body: some View {
       HStack {
@@ -41,11 +41,11 @@ struct SongCollectionSongView: View {
         
         
           Button(action: {
-            
+            buttonAction(song)
           }, label: {
             HStack {
               Spacer()
-              Text("Replace")
+              Text(buttonTitle)
               Spacer()
             }
           })
@@ -54,6 +54,7 @@ struct SongCollectionSongView: View {
           .cornerRadius(3.0)
           .padding()
           .frame(width: 125)
+          .buttonStyle(PlainButtonStyle())
           
       }
       .foregroundColor(.white)
@@ -68,6 +69,7 @@ struct SongCollectionSongView_Previews: PreviewProvider {
         Color.black
           .edgesIgnoringSafeArea(.all)
         SongCollectionSongView(song: allSongs[0], buttonTitle: "Replace") {
+          song in
           print("hi")
         }
       }

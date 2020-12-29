@@ -11,6 +11,9 @@ struct SearchSongsView: View {
   @ObservedObject var vm = SearchSongsViewModel()
   @State private var searchText = ""
   
+  var onChosen: (Song) -> Void
+  var onDismiss: () -> Void
+  
   var body: some View {
     let searchTextBinding = Binding {
       return searchText
@@ -24,6 +27,20 @@ struct SearchSongsView: View {
         .edgesIgnoringSafeArea(.all)
       
       VStack {
+        
+        HStack {
+          Spacer()
+          
+          Button(action: {
+            self.onDismiss()
+          }, label: {
+            Image(systemName: "xmark.circle")
+              .font(.system(size: 28))
+          })
+        }
+        .padding(.horizontal, 22)
+        
+        
         SearchBar(text: searchTextBinding, isLoading: $vm.isLoading)
           .padding()
         
@@ -32,17 +49,21 @@ struct SearchSongsView: View {
             Text("Empty")
           } else if vm.viewState == .ready {
             ForEach(vm.searchResults, id:\.self) { song in
-              SongCollectionSongView(song: song, buttonTitle: "Choose") {
-                print("Song chosen")
+              SongCollectionSongView(song: song, buttonTitle: "Add") {
+                song in
+                self.onChosen(song)
               }
             }
             .onTapGesture {
               print("tapped")
             }
+            
           }
           Spacer()
         }
       }
+      .animation(.none)
+      .transition(.opacity)
       .foregroundColor(.white)
     }
   }
@@ -50,6 +71,6 @@ struct SearchSongsView: View {
 
 struct SearchSongView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchSongsView()
+      SearchSongsView(onChosen: {_ in }, onDismiss: { })
     }
 }

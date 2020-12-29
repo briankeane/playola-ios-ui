@@ -14,7 +14,11 @@ struct FavoriteSongsView: View {
   
   @State var editingMode: EditMode = EditMode.inactive
   
+  @State var songToReplace: Song? = nil
+  
   init(favoriteSongs: [Song]) {
+    UITableView.appearance().allowsSelection = false
+    UITableViewCell.appearance().selectionStyle = .none
     self.favoriteSongs = favoriteSongs
     UITableView.appearance().backgroundColor = .clear
   }
@@ -32,38 +36,46 @@ struct FavoriteSongsView: View {
           HStack {
             Spacer()
             
-            EditButton()
-            
-            Spacer()
-            SmallVerticalButton(text: "Add A Song", isOnImage: Image(systemName: "plus"), isOffImage: Image(systemName: "plus"), isOn: true) {
-              print("selected")
+            SmallVerticalButton(text: self.editingMode == .inactive ? "Reorder" : "Done", isOnImage: Image(systemName: "plus"), isOffImage: Image(systemName: "plus"), isOn: true) {
+              self.editingMode = self.editingMode == .active ? .inactive : .active
+            }.onTapGesture {
+              self.editingMode = self.editingMode == .active ? .inactive : .active
             }
+            
             Spacer()
           }
           .listRowBackground(Color.black)
           
           ForEach(favoriteSongs, id:\.self) { song in
-            SongCollectionSongView(song: song, buttonTitle: "Replace") {
-              print("here")
+            SongCollectionSongView(song: song, buttonTitle: "Replace") { song in
+              print("Song Chosen: \(song.title)")
+              self.songToReplace = song
             }
           }.onMove(perform: { indices, newOffset in
             print("move")
-            self.editingMode = .inactive
           })
-          .onLongPressGesture {
-            self.editingMode = EditMode.active
-          }
-
-          .onTapGesture {
-            print("tapped")
-          }
+          .onDelete(perform: { indexSet in
+            print("delete")
+          })
+          .listRowInsets(EdgeInsets(top: 0, leading: self.editingMode == .active ? -43 : 0, // workaround !!
+                          bottom: 0, trailing: 0))
           .listRowBackground(Color.black)
-          
           
         }
         .padding(.top, -100)
-        .environment(\.editMode, .constant(editingMode))
-        
+        .environment(\.editMode, .constant(self.editingMode))
+        .animation(.default)
+      }
+      
+      if songToReplace != nil {
+        SearchSongsView { (song) in
+          print("replacing \(songToReplace!.title) with :\(song.title)")
+          self.songToReplace = nil
+        } onDismiss: {
+          self.songToReplace = nil
+        }
+        .animation(.easeInOut)
+        .transition(.opacity)
       }
     }
     .foregroundColor(.white)
