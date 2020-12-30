@@ -39,6 +39,8 @@
 		4BE4B0EE259BF588002BD93C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE4B0ED259BF588002BD93C /* HeaderView.swift */; };
 		4BE4B0F1259CC8CB002BD93C /* FollowersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE4B0F0259CC8CB002BD93C /* FollowersView.swift */; };
 		4BE4B0F4259CE34A002BD93C /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE4B0F3259CE34A002BD93C /* UserView.swift */; };
+		4BE4B0FA259D014F002BD93C /* FollowerPlaylistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE4B0F9259D014F002BD93C /* FollowerPlaylistDetailView.swift */; };
+		4BE4B0FD259D147D002BD93C /* SongListEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE4B0FC259D147D002BD93C /* SongListEditorView.swift */; };
 		6E6C8E0A23B40906F9F1D126 /* Pods_PlayolaiOSUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 204BB74243F409927A9D0BF6 /* Pods_PlayolaiOSUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,8 @@
 		4BE4B0ED259BF588002BD93C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		4BE4B0F0259CC8CB002BD93C /* FollowersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersView.swift; sourceTree = "<group>"; };
 		4BE4B0F3259CE34A002BD93C /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		4BE4B0F9259D014F002BD93C /* FollowerPlaylistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerPlaylistDetailView.swift; sourceTree = "<group>"; };
+		4BE4B0FC259D147D002BD93C /* SongListEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListEditorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,20 +122,18 @@
 				4B42A278258D020500037AA8 /* PlayolaiOSUIApp.swift */,
 				4B42A29E258D35BC00037AA8 /* CurrentUser.swift */,
 				4B20BE7B259A4A3200EC7F46 /* SearchBar.swift */,
-				4BA0E4E3259A5B8C0098FF5E /* SearchSongsView.swift */,
-				4BE4B0EA259BF0D3002BD93C /* SongPickerView.swift */,
-				4BE4B0D8259BE6FF002BD93C /* SongSearchTabSwitcher.swift */,
-				4BE4B0E7259BEFCB002BD93C /* SearchFavoriteSongsView.swift */,
-				4BA0E4E6259A5BC90098FF5E /* SearchSongsViewModel.swift */,
+				4BE4B0F7259CFFFD002BD93C /* SongPicker */,
 				4B20BE7E259A582400EC7F46 /* ActivityIndicator.swift */,
 				4B42A2B9258D587D00037AA8 /* SongCollectionView */,
 				4B42A2B7258D587100037AA8 /* SignInView */,
 				4B8DA4A625992E6500D887DA /* Extensions */,
 				4B42A27A258D020500037AA8 /* ContentView.swift */,
 				4BE4B0F0259CC8CB002BD93C /* FollowersView.swift */,
+				4BE4B0F9259D014F002BD93C /* FollowerPlaylistDetailView.swift */,
 				4BE4B0F3259CE34A002BD93C /* UserView.swift */,
 				4B8DA4AD2599342D00D887DA /* SmallVerticalButton.swift */,
 				4B8DA4A02599084C00D887DA /* FavoriteSongsView.swift */,
+				4BE4B0FC259D147D002BD93C /* SongListEditorView.swift */,
 				4BE4B0ED259BF588002BD93C /* HeaderView.swift */,
 				4B8DA4BD259A144D00D887DA /* ImageGrid.swift */,
 				4B42A27C258D020800037AA8 /* Assets.xcassets */,
@@ -182,6 +184,18 @@
 				4BE4B0DB259BE927002BD93C /* String+width.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4BE4B0F7259CFFFD002BD93C /* SongPicker */ = {
+			isa = PBXGroup;
+			children = (
+				4BA0E4E3259A5B8C0098FF5E /* SearchSongsView.swift */,
+				4BE4B0EA259BF0D3002BD93C /* SongPickerView.swift */,
+				4BE4B0D8259BE6FF002BD93C /* SongSearchTabSwitcher.swift */,
+				4BE4B0E7259BEFCB002BD93C /* SearchFavoriteSongsView.swift */,
+				4BA0E4E6259A5BC90098FF5E /* SearchSongsViewModel.swift */,
+			);
+			path = SongPicker;
 			sourceTree = "<group>";
 		};
 		5E1037516D38D82C1D7D2502 /* Pods */ = {
@@ -322,6 +336,7 @@
 				4BA0E50F259A9D3E0098FF5E /* DragExperiment.swift in Sources */,
 				4B8DA4AE2599342D00D887DA /* SmallVerticalButton.swift in Sources */,
 				4B8DA4A12599084C00D887DA /* FavoriteSongsView.swift in Sources */,
+				4BE4B0FD259D147D002BD93C /* SongListEditorView.swift in Sources */,
 				4BA0E4E4259A5B8C0098FF5E /* SearchSongsView.swift in Sources */,
 				4B20BE7C259A4A3200EC7F46 /* SearchBar.swift in Sources */,
 				4B42A28E258D048400037AA8 /* SignInView.swift in Sources */,
@@ -332,6 +347,7 @@
 				4BE4B0EB259BF0D3002BD93C /* SongPickerView.swift in Sources */,
 				4BE4B0E8259BEFCB002BD93C /* SearchFavoriteSongsView.swift in Sources */,
 				4B42A279258D020500037AA8 /* PlayolaiOSUIApp.swift in Sources */,
+				4BE4B0FA259D014F002BD93C /* FollowerPlaylistDetailView.swift in Sources */,
 				4B42A2B2258D55BC00037AA8 /* SongCollectionViewModel.swift in Sources */,
 				4BE4B0DC259BE927002BD93C /* String+width.swift in Sources */,
 				4BE4B0EE259BF588002BD93C /* HeaderView.swift in Sources */,

@@ -43,12 +43,16 @@ struct FavoriteSongsView: View {
             print("move")
           })
           .onDelete(perform: { indexSet in
-            print("delete")
+            if let index = indexSet.first {
+              let song = self.favoriteSongs[index]
+              print("delete \(song.title)")
+            }
+            
           })
           .listRowInsets(EdgeInsets(top: 0, leading: self.editingMode == .active ? -43 : 0, // workaround !!
                           bottom: 0, trailing: 0))
           .listRowBackground(Color.black)
-          
+
         }
         .padding(.top, -100)
         .environment(\.editMode, .constant(self.editingMode))

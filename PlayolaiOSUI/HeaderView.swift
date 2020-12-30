@@ -13,12 +13,11 @@ struct HeaderView: View {
   var description: String
   
   var body: some View {
-    ZStack {
+    ZStack(alignment: .bottom) {
       ImageGrid(imageURLS: imageURLs)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width * 2/3)
       
       VStack {
-        Spacer()
         Text(title)
           .font(.system(size: 36))
           .bold()
@@ -32,5 +31,17 @@ struct HeaderView: View {
       .multilineTextAlignment(.center)
     }
     .listRowInsets(EdgeInsets())
+    .foregroundColor(.white)
   }
 }
+
+struct HeaderView_Previews: PreviewProvider {
+  static var previews: some View {
+    ZStack {
+      Color.black
+        .edgesIgnoringSafeArea(.all)
+      HeaderView(imageURLs: allSongs.map({$0.thumbnailURL }), title: "Your Shared Songs", description: "These are the songs that are included in Brian Keane's discover playlist")
+    }
+  }
+}
+
