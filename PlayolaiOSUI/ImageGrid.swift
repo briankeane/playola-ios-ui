@@ -53,6 +53,7 @@ struct ImageGrid: View {
             .listRowInsets(EdgeInsets())
           }
         }.edgesIgnoringSafeArea(.all)
+        .animation(.none)
         
         Color.black.opacity(0.3)
           .background(LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.9)]), startPoint: .top, endPoint: .bottom))

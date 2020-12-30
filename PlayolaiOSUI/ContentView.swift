@@ -22,6 +22,12 @@ struct ContentView: View {
             Text("Broadcast")
           }.tag(0)
         
+        FollowersView(followers: allUsers)
+          .tabItem {
+            Image(systemName: "person.fill")
+            Text("Followers")
+          }.tag(0)
+        
         DemoDragRelocateView()
           .tabItem {
             Image(systemName: "play.fill")
