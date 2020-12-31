@@ -28,10 +28,10 @@ struct ContentView: View {
             Text("Followers")
           }.tag(0)
         
-        DemoDragRelocateView()
+        PlaylistsView(friends: allUsers)
           .tabItem {
             Image(systemName: "play.fill")
-            Text("Play")
+            Text("Playlists")
           }.tag(0)
         
         Text("Profile Screen")
