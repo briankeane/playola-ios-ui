@@ -33,26 +33,11 @@ struct FavoriteSongsView: View {
         List {
           HeaderView(imageURLs: favoriteSongs.map({$0.thumbnailURL }), title: "Your Song Collection", description: "These 10 songs will be used to generate playlists for your friends.")
 
-          
-          ForEach(favoriteSongs, id:\.self) { song in
-            SongCollectionSongView(song: song, buttonTitle: "Replace") { song in
-              print("Song Chosen: \(song.title)")
-              self.songToReplace = song
-            }
-          }.onMove(perform: { indices, newOffset in
-            print("move")
-          })
-          .onDelete(perform: { indexSet in
-            if let index = indexSet.first {
-              let song = self.favoriteSongs[index]
-              print("delete \(song.title)")
-            }
-            
-          })
-          .listRowInsets(EdgeInsets(top: 0, leading: self.editingMode == .active ? -43 : 0, // workaround !!
-                          bottom: 0, trailing: 0))
-          .listRowBackground(Color.black)
-
+          SongListEditorView(songs: favoriteSongs) { song in
+            self.songToReplace = song
+          } onSongDeleted: { song in
+            print("delete: \(song.title)")
+          }
         }
         .padding(.top, -100)
         .environment(\.editMode, .constant(self.editingMode))

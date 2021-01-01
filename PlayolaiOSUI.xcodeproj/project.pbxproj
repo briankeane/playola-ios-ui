@@ -126,7 +126,6 @@
 				4B42A2A4258D391800037AA8 /* Mocks.swift */,
 				4B42A278258D020500037AA8 /* PlayolaiOSUIApp.swift */,
 				4B42A29E258D35BC00037AA8 /* CurrentUser.swift */,
-				4BE4B0F7259CFFFD002BD93C /* SongPicker */,
 				4BE4B110259E699B002BD93C /* Components */,
 				4BE4B111259E69CE002BD93C /* Pages */,
 				4B8DA4A625992E6500D887DA /* Extensions */,
@@ -211,6 +210,7 @@
 		4BE4B110259E699B002BD93C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4BE4B0F7259CFFFD002BD93C /* SongPicker */,
 				4BA0E50E259A9D3E0098FF5E /* DragExperiment.swift */,
 				4B20BE7B259A4A3200EC7F46 /* SearchBar.swift */,
 				4B8DA4AD2599342D00D887DA /* SmallVerticalButton.swift */,

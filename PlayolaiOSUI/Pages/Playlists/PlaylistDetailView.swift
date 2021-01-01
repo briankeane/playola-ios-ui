@@ -9,7 +9,7 @@ import SwiftUI
 
 //struct PlaylistDetailView: View {
 //  var playlist: Playlist
-//  
+//
 //    var body: some View {
 //      Text("Discover ").foregroundColor(.playolaRed) + Text(friend.displayName).foregroundColor(.white)
 //    }
