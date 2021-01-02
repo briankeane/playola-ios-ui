@@ -17,17 +17,10 @@ struct SongPickerView: View {
         .edgesIgnoringSafeArea(.all)
       
       VStack {
-        HStack {
-          Spacer()
-          
-          Button(action: {
-            self.onDismiss()
-          }, label: {
-            Image(systemName: "xmark.circle")
-              .font(.system(size: 28))
-          })
-        }
+        DismissHeader(onDismiss: self.onDismiss)
         .padding(.horizontal, 22)
+        .padding(.top, 5)
+        
         SongSearchTabSwitcher(onChosen: self.onChosen)
       }
     }

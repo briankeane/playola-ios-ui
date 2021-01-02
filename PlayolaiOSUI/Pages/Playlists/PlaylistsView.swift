@@ -10,7 +10,8 @@ import Foundation
 import MessageUI
 
 struct PlaylistsView: View {
-  var friends: [User]
+  var playlists: [Playlist]
+  @State private var selectedPlaylist: Playlist?
   
   @State var result: Result<MFMailComposeResult, Error>? = nil
   @State var isShowingMailView = false
@@ -49,8 +50,16 @@ struct PlaylistsView: View {
             
             HeaderView(imageURLs: allSongs.map({$0.thumbnailURL }), title: "Your Playlists", description: "These are your Discover playlists for each of your friends.")
             
-            ForEach(friends, id:\.self) { friend in
-              Text("Discover ").foregroundColor(.playolaRed) + Text(friend.displayName).foregroundColor(.white)
+            ForEach(playlists, id:\.self) { playlist in
+              HStack {
+                Spacer()
+                Text("Discover ").foregroundColor(.playolaRed) + Text(playlist.seeder.displayName).foregroundColor(.white)
+                Spacer()
+              }.onTapGesture {
+                print("\(playlist.seeder.displayName) tapped")
+                self.selectedPlaylist = playlist
+              }
+
             }
             .listRowBackground(Color.black)
             
@@ -103,15 +112,17 @@ struct PlaylistsView: View {
             }
             .listRowBackground(Color.black)
           }.padding(.top, -100)
-
-          
         }
-      }.foregroundColor(.white)
+        if self.selectedPlaylist != nil {
+          PlaylistDetailView(playlist: self.selectedPlaylist!)
+        }
+      }
+      .foregroundColor(.white)
     }
 }
 
 struct PlaylistsView_Previews: PreviewProvider {
     static var previews: some View {
-        PlaylistsView(friends: allUsers)
+        PlaylistsView(playlists: [])
     }
 }

@@ -33,7 +33,10 @@ var allUsers = [
   User(id: UUID().uuidString, displayName: "Michael Jude Grimes", email: "grimey@grimey.com", profileImageURL: URL(string: "https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-1/p320x320/133708014_10159331426689684_7784302449492481549_n.jpg?_nc_cat=107&ccb=2&_nc_sid=0c64ff&_nc_ohc=x8w7N17kG0sAX_9It5G&_nc_ht=scontent-ort2-2.xx&tp=6&oh=1e3bc3b2751780e7c3cf12e0ba9cc4a4&oe=6012D372")),
 ]
 
+let allPlaylists = allUsers.map { Playlist(id: UUID().uuidString, seeder: $0, listener: currentUser, songs: generateSongs(5)) }
 let currentUser = User(id: UUID().uuidString, displayName: "Brian Keane", email: "brian@brian.com", profileImageURL: URL(string: "https://avatars0.githubusercontent.com/u/6233176?s=460&v=4")!)
+
+let currentPlaylist = Playlist(id: UUID().uuidString, seeder: allUsers[1], listener: allUsers[2], songs: Array(allSongs[0..<5]))
 
 func generateSongs(_ count:Int) -> [Song] {
   var songsSet = Set(allSongs)

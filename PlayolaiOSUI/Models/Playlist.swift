@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Playlist: Identifiable, Hashable, Equatable {
+  var id: String
+  var seeder: User
+  var listener: User
+  var songs: [Song]
+}

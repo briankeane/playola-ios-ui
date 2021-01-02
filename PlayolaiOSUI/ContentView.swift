@@ -28,7 +28,7 @@ struct ContentView: View {
             Text("Followers")
           }.tag(0)
         
-        PlaylistsView(friends: allUsers)
+        PlaylistsView(playlists: allPlaylists)
           .tabItem {
             Image(systemName: "play.fill")
             Text("Playlists")

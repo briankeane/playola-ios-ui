@@ -39,7 +39,7 @@ struct FollowersView: View {
       }.padding(.top, -100)
       
       if self.detailedFollowerSongs != nil && self.detailedFollower != nil {
-        FollowerPlaylistDetailView(follower: self.detailedFollower!, followerSongs: self.detailedFollowerSongs!)
+        FollowerPlaylistDetailView(follower: self.detailedFollower!, followerSongs: self.detailedFollowerSongs!, onDismiss: { self.detailedFollower = nil })
       }
     }.foregroundColor(.white)
   }
