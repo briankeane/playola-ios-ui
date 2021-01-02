@@ -11,6 +11,7 @@
 		4B20BE7C259A4A3200EC7F46 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20BE7B259A4A3200EC7F46 /* SearchBar.swift */; };
 		4B20BE7F259A582400EC7F46 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20BE7E259A582400EC7F46 /* ActivityIndicator.swift */; };
 		4B20BE85259A59FF00EC7F46 /* View+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20BE84259A59FF00EC7F46 /* View+hideKeyboard.swift */; };
+		4B2DBE3A25A0F90400BF17A5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2DBE3925A0F90300BF17A5 /* SettingsView.swift */; };
 		4B42A279258D020500037AA8 /* PlayolaiOSUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42A278258D020500037AA8 /* PlayolaiOSUIApp.swift */; };
 		4B42A27B258D020500037AA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42A27A258D020500037AA8 /* ContentView.swift */; };
 		4B42A27D258D020800037AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B42A27C258D020800037AA8 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		4B20BE7B259A4A3200EC7F46 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		4B20BE7E259A582400EC7F46 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		4B20BE84259A59FF00EC7F46 /* View+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+hideKeyboard.swift"; sourceTree = "<group>"; };
+		4B2DBE3925A0F90300BF17A5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4B42A275258D020500037AA8 /* PlayolaiOSUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayolaiOSUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B42A278258D020500037AA8 /* PlayolaiOSUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayolaiOSUIApp.swift; sourceTree = "<group>"; };
 		4B42A27A258D020500037AA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				4BE4B114259E6A07002BD93C /* Playlists */,
 				4B42A2B9258D587D00037AA8 /* SongCollectionView */,
 				4B42A2B7258D587100037AA8 /* SignInView */,
+				4B2DBE3925A0F90300BF17A5 /* SettingsView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				4B42A2AF258D55AC00037AA8 /* SongCollectionView.swift in Sources */,
 				4BE4B0F1259CC8CB002BD93C /* FollowersView.swift in Sources */,
 				4BA0E50F259A9D3E0098FF5E /* DragExperiment.swift in Sources */,
+				4B2DBE3A25A0F90400BF17A5 /* SettingsView.swift in Sources */,
 				4B8DA4AE2599342D00D887DA /* SmallVerticalButton.swift in Sources */,
 				4B8DA4A12599084C00D887DA /* FavoriteSongsView.swift in Sources */,
 				4BE4B0FD259D147D002BD93C /* SongListEditorView.swift in Sources */,

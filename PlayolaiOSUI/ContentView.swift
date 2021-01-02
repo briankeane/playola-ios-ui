@@ -34,10 +34,11 @@ struct ContentView: View {
             Text("Playlists")
           }.tag(0)
         
-        Text("Profile Screen")
+        SettingsView()
           .tabItem {
-            Image(systemName: "person.fill")
-            Text("Profile")
+            Image("settingsIcon")
+              .resizable()
+            Text("Settings")
           }.tag(0)
       }
       .accentColor(.white)
