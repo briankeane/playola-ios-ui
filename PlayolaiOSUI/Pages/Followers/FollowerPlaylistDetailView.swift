@@ -20,9 +20,9 @@ struct FollowerPlaylistDetailView: View {
         .edgesIgnoringSafeArea(.all)
       
       VStack {
-        DismissHeader(onDismiss: self.onDismiss)
-        .padding(.horizontal, 22)
-        .padding(.top, 5)
+//        DismissHeader(onDismiss: self.onDismiss)
+//        .padding(.horizontal, 22)
+//        .padding(.top, 5)
         
         List {
           HeaderView(imageURLs: followerSongs.map({$0.thumbnailURL }), title: "Your Shared Songs", description: "These are the songs that are included in \(follower.displayName)'s discover playlist")
@@ -38,6 +38,13 @@ struct FollowerPlaylistDetailView: View {
         .animation(.default)
       }.foregroundColor(.white)
       
+      VStack {
+        DismissHeader(onDismiss: self.onDismiss)
+          .padding(.top, 5)
+          .padding(.horizontal, 15)
+        Spacer()
+      }
+            
       if self.songToReplace != nil {
         SongPickerView { (song) in
           print("replacing \(songToReplace!.title) with :\(song.title)")

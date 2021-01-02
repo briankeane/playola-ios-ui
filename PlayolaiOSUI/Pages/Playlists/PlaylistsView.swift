@@ -114,7 +114,7 @@ struct PlaylistsView: View {
           }.padding(.top, -100)
         }
         if self.selectedPlaylist != nil {
-          PlaylistDetailView(playlist: self.selectedPlaylist!)
+          PlaylistDetailView(playlist: self.selectedPlaylist!, onDismiss: { self.selectedPlaylist = nil })
         }
       }
       .foregroundColor(.white)

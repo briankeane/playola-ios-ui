@@ -11,14 +11,22 @@ struct DismissHeader: View {
   var onDismiss:() -> Void
     var body: some View {
       HStack {
-        Spacer()
+        
         
         Button(action: {
           self.onDismiss()
         }, label: {
-          Image(systemName: "xmark.circle")
+          Image(systemName: "chevron.left")
             .font(.system(size: 28))
         })
+        
+        Spacer()
+        
+        Image("PlayolaIcon")
+          .resizable()
+          .scaledToFit()
+          .clipped()
+          .frame(width:20)
       }
     }
 }

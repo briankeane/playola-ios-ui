@@ -185,7 +185,6 @@
 			children = (
 				4BA0E4E3259A5B8C0098FF5E /* SearchSongsView.swift */,
 				4BE4B0EA259BF0D3002BD93C /* SongPickerView.swift */,
-				4B099E9725A0D4F200D6B5BC /* DismissHeader.swift */,
 				4BE4B0D8259BE6FF002BD93C /* SongSearchTabSwitcher.swift */,
 				4BE4B0E7259BEFCB002BD93C /* SearchFavoriteSongsView.swift */,
 				4BA0E4E6259A5BC90098FF5E /* SearchSongsViewModel.swift */,
@@ -217,6 +216,7 @@
 			children = (
 				4BE4B0F7259CFFFD002BD93C /* SongPicker */,
 				4BA0E50E259A9D3E0098FF5E /* DragExperiment.swift */,
+				4B099E9725A0D4F200D6B5BC /* DismissHeader.swift */,
 				4B20BE7B259A4A3200EC7F46 /* SearchBar.swift */,
 				4B8DA4AD2599342D00D887DA /* SmallVerticalButton.swift */,
 				4BE4B0F3259CE34A002BD93C /* UserView.swift */,
