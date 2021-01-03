@@ -202,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				4BE4B0F0259CC8CB002BD93C /* FollowersView.swift */,
+				4B2DBE4225A142DA00BF17A5 /* FollowerPlaylistDetailViewModel.swift */,
 				4BE4B0F9259D014F002BD93C /* FollowerPlaylistDetailView.swift */,
 			);
 			path = Followers;
@@ -239,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				4B8DA4A02599084C00D887DA /* FavoriteSongsView.swift */,
-				4B2DBE4225A142DA00BF17A5 /* FollowerPlaylistDetailViewModel.swift */,
 				4B2DBE3C25A13F0500BF17A5 /* FavoriteSongsViewModel.swift */,
 				4BE4B0FF259D2D91002BD93C /* Followers */,
 				4BE4B114259E6A07002BD93C /* Playlists */,

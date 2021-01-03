@@ -19,9 +19,7 @@ struct PlaylistDetailView: View {
         VStack {
           List {
               HeaderView(imageURLs: playlist.songs.map({$0.thumbnailURL }), title: "Discover \(playlist.seeder.displayName)", description: "")
-            
-            
-            
+          
             SongListEditorView(songs: playlist.songs) { (song) in
               print("song chosen: \(song.title)")
             } onSongDeleted: { (song) in

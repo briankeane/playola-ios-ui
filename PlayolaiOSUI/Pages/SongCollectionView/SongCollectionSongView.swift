@@ -39,7 +39,6 @@ struct SongCollectionSongView: View {
         
         Spacer()
         
-        
           Button(action: {
             buttonAction(song)
           }, label: {
