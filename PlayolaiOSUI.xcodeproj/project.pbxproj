@@ -12,6 +12,7 @@
 		4B20BE7F259A582400EC7F46 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20BE7E259A582400EC7F46 /* ActivityIndicator.swift */; };
 		4B20BE85259A59FF00EC7F46 /* View+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B20BE84259A59FF00EC7F46 /* View+hideKeyboard.swift */; };
 		4B2DBE3A25A0F90400BF17A5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2DBE3925A0F90300BF17A5 /* SettingsView.swift */; };
+		4B2DBE3D25A13F0500BF17A5 /* FavoriteSongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2DBE3C25A13F0500BF17A5 /* FavoriteSongsViewModel.swift */; };
 		4B42A279258D020500037AA8 /* PlayolaiOSUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42A278258D020500037AA8 /* PlayolaiOSUIApp.swift */; };
 		4B42A27B258D020500037AA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42A27A258D020500037AA8 /* ContentView.swift */; };
 		4B42A27D258D020800037AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B42A27C258D020800037AA8 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		4B20BE7E259A582400EC7F46 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		4B20BE84259A59FF00EC7F46 /* View+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+hideKeyboard.swift"; sourceTree = "<group>"; };
 		4B2DBE3925A0F90300BF17A5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4B2DBE3C25A13F0500BF17A5 /* FavoriteSongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSongsViewModel.swift; sourceTree = "<group>"; };
 		4B42A275258D020500037AA8 /* PlayolaiOSUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayolaiOSUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B42A278258D020500037AA8 /* PlayolaiOSUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayolaiOSUIApp.swift; sourceTree = "<group>"; };
 		4B42A27A258D020500037AA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				4B8DA4A02599084C00D887DA /* FavoriteSongsView.swift */,
+				4B2DBE3C25A13F0500BF17A5 /* FavoriteSongsViewModel.swift */,
 				4BE4B0FF259D2D91002BD93C /* Followers */,
 				4BE4B114259E6A07002BD93C /* Playlists */,
 				4B42A2B9258D587D00037AA8 /* SongCollectionView */,
@@ -418,6 +421,7 @@
 				4B8DA4A425992E4A00D887DA /* LinearGradient+blackOpacityGradient.swift in Sources */,
 				4B42A29F258D35BC00037AA8 /* CurrentUser.swift in Sources */,
 				4BE4B0F4259CE34A002BD93C /* UserView.swift in Sources */,
+				4B2DBE3D25A13F0500BF17A5 /* FavoriteSongsViewModel.swift in Sources */,
 				4B42A294258D04E400037AA8 /* SignInViewModel.swift in Sources */,
 				4B42A2A5258D391800037AA8 /* Mocks.swift in Sources */,
 			);

@@ -9,17 +9,15 @@ import SwiftUI
 import struct Kingfisher.KFImage
 
 struct FavoriteSongsView: View {
-  let favoriteSongs: [Song]
-  @State var isOn:Bool = true
+  let vm = FavoriteSongsViewModel()
+
   
-  @State var editingMode: EditMode = EditMode.inactive
-  
+  // setting this to a non-nil Song presents the SongPickerView
   @State var songToReplace: Song? = nil
   
   init(favoriteSongs: [Song]) {
     UITableView.appearance().allowsSelection = false
     UITableViewCell.appearance().selectionStyle = .none
-    self.favoriteSongs = favoriteSongs
     UITableView.appearance().backgroundColor = .clear
   }
   
@@ -31,22 +29,24 @@ struct FavoriteSongsView: View {
         .edgesIgnoringSafeArea(.all)
       VStack {
         List {
-          HeaderView(imageURLs: favoriteSongs.map({$0.thumbnailURL }), title: "Your Song Collection", description: "These 10 songs will be used to generate playlists for your friends.")
+          HeaderView(imageURLs: vm.favoriteSongs.map({$0.thumbnailURL }), title: "Your Song Collection", description: "These 10 songs will be used to generate playlists for your friends.")
 
-          SongListEditorView(songs: favoriteSongs) { song in
+          SongListEditorView(songs: vm.favoriteSongs) { song in
             self.songToReplace = song
           } onSongDeleted: { song in
             print("delete: \(song.title)")
           }
         }
         .padding(.top, -100)
-        .environment(\.editMode, .constant(self.editingMode))
         .animation(.default)
       }
       
       if songToReplace != nil {
         SongPickerView { (song) in
           print("replacing \(songToReplace!.title) with :\(song.title)")
+          if let songToReplace = self.songToReplace {
+            vm.replaceSong(songToRemove: songToReplace, songToInsert: song)
+          }
           self.songToReplace = nil
         } onDismiss: {
           self.songToReplace = nil
