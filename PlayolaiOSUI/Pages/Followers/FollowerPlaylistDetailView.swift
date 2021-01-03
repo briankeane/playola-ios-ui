@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct FollowerPlaylistDetailView: View {
-  var follower: User
-  var followerSongs: [Song]
+  var vm: FollowerPlaylistDetailViewModel
   var onDismiss: () -> Void
+  
+  init(playlist: Playlist, onDismiss: @escaping ()-> Void) {
+    self.vm = FollowerPlaylistDetailViewModel(playlist: playlist)
+    self.onDismiss = onDismiss
+  }
   
   @State private var songToReplace: Song?
   
@@ -20,19 +24,15 @@ struct FollowerPlaylistDetailView: View {
         .edgesIgnoringSafeArea(.all)
       
       VStack {
-//        DismissHeader(onDismiss: self.onDismiss)
-//        .padding(.horizontal, 22)
-//        .padding(.top, 5)
-        
         List {
-          HeaderView(imageURLs: followerSongs.map({$0.thumbnailURL }), title: "Your Shared Songs", description: "These are the songs that are included in \(follower.displayName)'s discover playlist")
+          HeaderView(imageURLs: vm.playlist.songs.map({$0.thumbnailURL }), title: "Your Shared Songs", description: "These are the songs that are included in \(vm.playlist.listener.displayName)'s discover playlist")
           
           
-          SongListEditorView(songs: followerSongs) { (song) in
+          SongListEditorView(songs: vm.playlist.songs) { (song) in
             print("song chosen: \(song.title)")
             self.songToReplace = song
           } onSongDeleted: { (song) in
-            print("song.deleted: \(song.title)")
+            self.vm.removeSong(song: song)
           }
         }.padding(.top, -100)
         .animation(.default)
@@ -47,7 +47,9 @@ struct FollowerPlaylistDetailView: View {
             
       if self.songToReplace != nil {
         SongPickerView { (song) in
-          print("replacing \(songToReplace!.title) with :\(song.title)")
+          if let songToReplace = self.songToReplace {
+            self.vm.replaceSong(songToRemove: songToReplace, songToInsert: song)
+          }
           self.songToReplace = nil
         } onDismiss: {
           self.songToReplace = nil
@@ -60,6 +62,6 @@ struct FollowerPlaylistDetailView: View {
 }
 struct FollowerPlaylistDetailView_Previews: PreviewProvider {
   static var previews: some View {
-    FollowerPlaylistDetailView(follower: allUsers.first!, followerSongs: Array(allSongs[0..<5]), onDismiss: {})
+    FollowerPlaylistDetailView(playlist: allPlaylists[0], onDismiss: {})
   }
 }

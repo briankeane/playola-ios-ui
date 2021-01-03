@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct FollowersView: View {
-  var followers:[User]
+  var playlists: [Playlist]
   
-  @State var detailedFollower: User?
-  @State var detailedFollowerSongs: [Song]?
+  @State var detailedPlaylist: Playlist?
   
   let columns = [
     GridItem(.flexible()),
@@ -28,18 +27,17 @@ struct FollowersView: View {
         HeaderView(imageURLs: allSongs.map({$0.thumbnailURL}), title: "Your Followers", description: "Your cult membership.")
         
         LazyVGrid(columns: columns) {
-          ForEach(followers, id: \.self) { follower in
-            UserView(user: follower)
+          ForEach(playlists, id: \.self) { playlist in
+            UserView(user: playlist.listener)
               .onTapGesture {
-                self.detailedFollowerSongs = allSongs
-                self.detailedFollower = follower
+                self.detailedPlaylist = playlist
               }
           }
         }
       }.padding(.top, -100)
       
-      if self.detailedFollowerSongs != nil && self.detailedFollower != nil {
-        FollowerPlaylistDetailView(follower: self.detailedFollower!, followerSongs: self.detailedFollowerSongs!, onDismiss: { self.detailedFollower = nil })
+      if self.detailedPlaylist != nil {
+        FollowerPlaylistDetailView(playlist: self.detailedPlaylist!, onDismiss: { self.detailedPlaylist = nil })
       }
     }.foregroundColor(.white)
   }
@@ -48,6 +46,6 @@ struct FollowersView: View {
 
 struct FollowersView_Previews: PreviewProvider {
   static var previews: some View {
-    FollowersView(followers: allUsers)
+    FollowersView(playlists: allPlaylists)
   }
 }

@@ -22,7 +22,7 @@ struct ContentView: View {
             Text("Broadcast")
           }.tag(0)
         
-        FollowersView(followers: allUsers)
+        FollowersView(playlists: allFollowersPlaylists)
           .tabItem {
             Image(systemName: "person.fill")
             Text("Followers")

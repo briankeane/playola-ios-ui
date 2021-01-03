@@ -9,7 +9,7 @@ import Foundation
 
 
 class FavoriteSongsViewModel: ObservableObject {
-  @Published var isLoading: Bool = true
+  @Published var isLoading: Bool = false
   @Published var favoriteSongs: [Song] = []
   
   init() {

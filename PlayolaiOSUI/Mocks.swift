@@ -48,3 +48,5 @@ func generateSongs(_ count:Int) -> [Song] {
   }
   return results
 }
+
+let allFollowersPlaylists = allUsers.filter({ $0 != currentUser }).map({ Playlist(id: UUID().uuidString, seeder: currentUser, listener: $0, songs: generateSongs(5))})
